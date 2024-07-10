@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board</title>
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.nav {
+    margin-top: 10px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.nav a:hover {
+    background-color: #575757;
+}
+
+.hero {
+    background-color: #e2e2e2;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    margin: 0 0 20px;
+}
+
+.job-listings {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.job-listings h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.job {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.job h3 {
+    margin: 0;
+}
+
+.job p {
+    margin: 5px 0;
+}
+
+.apply-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.apply-btn:hover {
+    background-color: #575757;
+}
+
+.post-job {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.post-job h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.post-job form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.post-job label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.post-job input, .post-job textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #575757;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer a {
+    color: #ff9800;
+    text-decoration: none;
+}
+
+    </style>
+   
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <h1>Job Board</h1>
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#jobs">Jobs</a>
+            <a href="#post-job">Post a Job</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Find Your Dream Job</h2>
+        <p>Explore thousands of job opportunities with all the information you need. Your future starts here.</p>
+    </section>
+
+    <section id="jobs" class="job-listings">
+        <h2>Job Listings</h2>
+        <div class="job">
+            <h3>Software Developer</h3>
+            <p><strong>Company:</strong> Tech Solutions</p>
+            <p><strong>Location:</strong> New , NY</p>
+            <p><strong>Salary:</strong> rs.80,000 - rs.100,000</p>
+            <button class="apply-btn">Apply Now</button>
+        </div>
+        <div class="job">
+            <h3>Graphic Designer</h3>
+            <p><strong>Company:</strong> Creative Inc.</p>
+            <p><strong>Location:</strong> San , CA</p>
+            <p><strong>Salary:</strong> rs.50,000 - rs.70,000</p>
+            <button class="apply-btn">Apply Now</button>
+        </div>
+        <div class="job">
+            <h3>Project Manager</h3>
+            <p><strong>Company:</strong> Business Corp.</p>
+            <p><strong>Location:</strong> Old ,TX</p>
+            <p><strong>Salary:</strong> rs.90,000 - rs.110,000</p>
+            <button class="apply-btn">Apply Now</button>
+        </div>
+    </section>
+
+    <section id="post-job" class="post-job">
+        <h2>Post a Job</h2>
+        <form action="#" method="post">
+            <label for="job-title">Job Title</label>
+            <input type="text" id="job-title" name="job-title" required>
+            
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" required>
+            
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" required>
+            
+            <label for="salary">Salary</label>
+            <input type="text" id="salary" name="salary" required>
+            
+            <label for="description">Job Description</label>
+            <textarea id="description" name="description" rows="5" required></textarea>
+            
+            <button type="submit" class="submit-btn">Post Job</button>
+        </form>
+    </section>
+
+    <footer id="contact" class="footer">
+        <p>&copy; 2024 Job Board. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:info@jobboard.com">info@jobboard.com</a></p>
+    </footer>
+</div>
+
+</body>
+</html>
