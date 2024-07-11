@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(141, 217, 236);
+        }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 40px;
+        }
+        /*navbar*/
+        #navbar {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            top: 0;
+            position: sticky;
+            background-color: #db1010;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            margin: 29px 0px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .navbar ul li {
+            font-family: century;
+            font-size: 1.2em;
+            font-weight: 46px;
+            background-color: #f7f4f4;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: rgb(6, 167, 78);
+            padding: 8px 25px;
+            transition: all .5s ease;
+            flex-wrap: wrap;
+        }
+        .navbar ul li a:hover {
+            background-color: #fee2e2;
+            color: rgb(50, 247, 1);
+            box-shadow: 0 0 10px white;
+            border-radius: 50px;
+        }
+        /*home section*/
+        #home {
+            display: flex;
+            flex-direction: column;
+            height: 407px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #home::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: url('photo1.jpg') no-repeat center center/cover;
+            height: 450px;
+            width: 450px;
+            border-radius: 50%;
+            opacity: .8;
+            margin-right: 200px;
+            margin-top: 150px;
+            filter: drop-shadow(8px 8px 25px rgb(248, 128, 142));
+            flex-wrap: wrap;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 259px;
+            margin-right: 75px;
+            font-size: 20px;
+            color: rgb(14, 13, 13);
+        }
+        .main h1 {
+            font-size: 50px;
+            font-style: italic;
+            color: rgb(26, 25, 25);
+        }
+        .heading {
+            font-size: 3.4rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+            color: rgb(17, 17, 17);
+        }
+        .btn {  
+          margin-left: -12px;
+          margin-top: 7px;
+          border-radius: 69px;
+          text-align: center;
+          width: 199px;
+          height: 52px;
+          background-color: #08f0f0;
+          border: 8px solid black;
+          outline: none;
+          transition: .6s ease;
+        }
+        .btn:hover {
+            cursor: pointer;
+            background-color: pink;
+            color: white;
+            filter: drop-shadow(0 0 5px rgba(68, 57, 57, 0.516), 0 0 10px rgba(63, 50, 50, 0.294));
+        }
+        /*about section*/
+        #about {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 18px;
+            text-align: center;
+            color: black;
+            margin-bottom: 80px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        #intro {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+            color: rgb(22, 22, 22);
+        }
+
+        #intro h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: rgb(19, 18, 18);
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 16px;
+        }
+
+        .card {
+            width: 300px;
+            background-color: #f4f4f4fe;
+            border-radius: 10px;
+            box-shadow: 0px 6px 8px rgb(236, 149, 164);
+            overflow: hidden;
+            transition: transform 0.6s ease;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .card:hover {
+            transform: translateY(-20px)
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h3 {
+            font-size: 18px;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .card-content p {
+            font-size: 14px;
+            color: black;
+            margin-bottom: 10px;
+        }
+        .card-btn {
+            display: inline-block;
+            background-color: rgb(73, 188, 254);
+            text-decoration: none;
+            color: black;
+            border: 1px solid rgb(64, 64, 255);
+            border-radius: 4px;
+            padding: 5px 10px;
+        }
+        #contact {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            height: 150px;
+            padding: 10px;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            align-items: center;
+            margin-bottom: 60px;
+            border-width: 100px;
+        }
+        .input {
+            padding: 14px;
+            margin: 15px;
+            width: 30%;
+        }
+        #send {
+            padding: 10px;
+            margin: 40px;
+            width: 10%;
+            border-radius: 10px;
+            background-color: rgb(48, 116, 224);
+        }
+        #send:hover {
+            cursor: pointer;
+            box-shadow: 0 0 10px rgb(8, 8, 8);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <section id="navbar">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+        </nav>
+    </section>
+    <!-- Home Section -->
+    <section id="home">
+        <div class="main">
+            <br>
+            <h1>I AM AIL</h1>
+            <button class="btn">  Download CV </button>
+        </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about">
+        <h1 class="heading">About</h1>
+        <div id="intro">
+            <h2>Ail</h2>
+            <p>Hey! I am a web developer passionate about creating responsive and user-friendly websites. 
+                Proficient in HTML, CSS, and JavsaScript, I specialize in both frontend and backend technologies. Beyond the screen, I'm on a continual quest for knowledge, seeking to enhance my skills and contribute meaningfully to the ever-evolving tech landscape.</p>
+        </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills">
+        <h1 class="heading">Skills</h1>
+        <div class="card-container">
+            <div class="card">
+                <img src="ISO_C++_Logo.jpg" alt="" width="">
+                <div class="card-content">
+                    <h3>C++</h3>
+                    <p>C++ is a cross-platform language that can be used to create high-performance applications.C++ was developed by Bjarne Stroustrup, as an extension to the C language....</p>
+                    <a href="" class="card-btn">Read more</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="HTML5_logo_and_wordmark.jpg " alt="" width="">
+                <div class="card-content">
+                    <h3>HTML</h3>
+                    <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser...</p>
+                    <a href="" class="card-btn">Read more</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="CSS3_logo_and_wordmark.jpg" alt="" width=""height="3px">
+                <div class="card-content">
+                    <h3>CSS</h3>
+                    <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser...</p>
+                    <a href="" class="card-btn">Read more</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="javascript-39400.jpg" alt="" width="">
+                <div class="card-content">
+                    <h3>JavaScript</h3>
+                <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser...</p>
+                    <a href="" class="card-btn">Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+  <!-- Contact Section -->
+    <section id="contact">
+        <h1 class="heading">Contact</h1>
+        <form action="" class="form">
+            <input type="text" name="name" class="input" placeholder="Enter Your Name">
+            <input type="email" name="email" class="input" placeholder="Enter Your E-mail">
+            <input type="tel" name="phone" class="input" placeholder="Phone No">
+            <input type="submit" value="SEND" id="send">
+        </form>
+    </section>
+</body>
+</html>
